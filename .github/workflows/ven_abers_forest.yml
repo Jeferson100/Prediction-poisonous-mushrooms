@@ -1,0 +1,44 @@
+name: Ven Abers Forest
+on: 
+  workflow_dispatch:
+jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Copia os arquivos do repo
+          uses: actions/checkout@v4
+        - name: Instalar o Python
+          uses: actions/setup-python@v3
+          with:
+            python-version: "3.12"
+        - name: Cache Python dependencies
+          uses: actions/cache@v3
+          with:
+            path: ~/.cache/pip
+            key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+            restore-keys: |
+              ${{ runner.os }}-pip-
+        - name: Install dependencies
+          run: |
+            make install
+        - name: Rodando coleta
+          run: |
+            cd ./tunagem
+            pwd
+            python ven_abers_tunagem.py
+
+        - name: Configure Git
+          run: |
+            git config --global user.email "sehnemjeferson@gmail.com"
+            git config --global user.name "Jeferson Sehnem"
+        - name: Commit and push changes
+          env:
+            GITHUB_TOKEN: ${{ secrets.ACTIONS_MUSHROOMS_PREDICT }}
+          run: |
+              git add .
+              if git diff-index --quiet HEAD; then
+                  echo "No changes to commit"
+                  exit 0
+              fi
+              git commit -m "Coletando dre em: $(date +'%Y-%m-%d')"
+              git push https://Jeferson100:${{ secrets.ACTIONS_MUSHROOMS_PREDICT }}@github.com/Jeferson100/fundamentalist-stock-brazil.git HEAD:main

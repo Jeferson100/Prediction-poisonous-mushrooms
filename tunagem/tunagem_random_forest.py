@@ -2,14 +2,19 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import RandomizedSearchCV
 from catboost import CatBoostClassifier
-from tunagem import Tunagem
+import sys
+import os 
+sys.path.append('../')
+from tratamento import Tratamento
 import pickle
+import os 
 
 # Carregando os dados
 
-diretorio = 'dados'
+# Defina o caminho do arquivo
+diretorio = os.path.join('/workspaces','binary_prediction_poisonous_mushrooms', 'dados', 'dados_tratados.pkl')
 
-with open(diretorio + '/dados_tratados.pkl', 'rb') as f:
+with open(diretorio, 'rb') as f:
     dados_tratados = pickle.load(f)
 
 x_train = dados_tratados['x_train']
@@ -18,8 +23,6 @@ y_train = dados_tratados['y_train']
 x_train = x_train.values
   
 print('Dowload dos dados com sucesso!')
-
-
 
 
 ## Parametros Cast Boost
@@ -34,6 +37,8 @@ grid_cat = RandomizedSearchCV(
             CatBoostClassifier(verbose=0), parametros_cat, verbose=0
         )
 grid_cat.fit(x_train, y_train)
+
+diretorio = os.path.join('/workspaces','binary_prediction_poisonous_mushrooms', 'modelos')
 
 
 with open(diretorio + '/cat_boost_tunado.pkl', 'wb') as f:
