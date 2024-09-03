@@ -4,7 +4,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 import sys
-sys.path.append('/home/vscode/.local/lib/python3.10/site-packages')
+#sys.path.append('/home/vscode/.local/lib/python3.10/site-packages')
 from feature_engine.transformation import LogCpTransformer, YeoJohnsonTransformer, BoxCoxTransformer
 class Tratamento:
     def retirando_ids(self, dados):

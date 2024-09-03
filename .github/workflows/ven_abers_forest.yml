@@ -21,7 +21,7 @@ jobs:
         - name: Install dependencies
           run: |
             make install
-        - name: Rodando coleta
+        - name: Rodando ven_abers_tunagem
           run: |
             cd ./tunagem
             pwd

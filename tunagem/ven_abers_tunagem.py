@@ -10,8 +10,11 @@ from venn_abers import VennAbersCalibrator
 
 # Carregando os dados
 
-# Defina o caminho do arquivo
-diretorio = os.path.join('/workspaces','binary_prediction_poisonous_mushrooms', 'dados', 'dados_tratados.pkl')
+# Constrói o caminho absoluto da raiz do projeto
+root_dir = os.path.abspath(os.path.join(os.getcwd(), '..'))
+
+# Constrói o caminho absoluto para o arquivo 'dados_tratados.pkl' dentro da pasta 'dados'
+diretorio = os.path.join(root_dir, 'dados', 'dados_tratados.pkl')
 
 with open(diretorio, 'rb') as f:
     dados_tratados = pickle.load(f)
@@ -23,11 +26,7 @@ x_train = x_train.values
   
 print('Dowload dos dados com sucesso!')
 
-
-diretorio = 'modelos'
-
-
-diretorio = os.path.join('/workspaces','binary_prediction_poisonous_mushrooms', 'modelos') # Modelos tunado
+diretorio = diretorio = os.path.join(root_dir, 'modelos')
 
 ## fazendo dowload dos modelos
 
