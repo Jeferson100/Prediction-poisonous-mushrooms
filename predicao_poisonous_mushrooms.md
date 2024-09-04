@@ -393,95 +393,6 @@ train.head()
 </svg>
   </button>
 
-<style>
-  .colab-df-quickchart {
-      --bg-color: #E8F0FE;
-      --fill-color: #1967D2;
-      --hover-bg-color: #E2EBFA;
-      --hover-fill-color: #174EA6;
-      --disabled-fill-color: #AAA;
-      --disabled-bg-color: #DDD;
-  }
-
-  [theme=dark] .colab-df-quickchart {
-      --bg-color: #3B4455;
-      --fill-color: #D2E3FC;
-      --hover-bg-color: #434B5C;
-      --hover-fill-color: #FFFFFF;
-      --disabled-bg-color: #3B4455;
-      --disabled-fill-color: #666;
-  }
-
-  .colab-df-quickchart {
-    background-color: var(--bg-color);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    fill: var(--fill-color);
-    height: 32px;
-    padding: 0;
-    width: 32px;
-  }
-
-  .colab-df-quickchart:hover {
-    background-color: var(--hover-bg-color);
-    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-    fill: var(--button-hover-fill-color);
-  }
-
-  .colab-df-quickchart-complete:disabled,
-  .colab-df-quickchart-complete:disabled:hover {
-    background-color: var(--disabled-bg-color);
-    fill: var(--disabled-fill-color);
-    box-shadow: none;
-  }
-
-  .colab-df-spinner {
-    border: 2px solid var(--fill-color);
-    border-color: transparent;
-    border-bottom-color: var(--fill-color);
-    animation:
-      spin 1s steps(1) infinite;
-  }
-
-  @keyframes spin {
-    0% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-      border-left-color: var(--fill-color);
-    }
-    20% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    30% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-      border-right-color: var(--fill-color);
-    }
-    40% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    60% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-    }
-    80% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-bottom-color: var(--fill-color);
-    }
-    90% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-    }
-  }
-</style>
 
   <script>
     async function quickchart(key) {
@@ -519,24 +430,6 @@ test.head()
 ```
 
 
-
-
-
-  <div id="df-a47d2958-5774-4f6b-97cd-4c54d270e98d" class="colab-df-container">
-    <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -701,46 +594,7 @@ test.head()
   </svg>
     </button>
 
-  <style>
-    .colab-df-container {
-      display:flex;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    .colab-df-buttons div {
-      margin-bottom: 4px;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
+ 
 
     <script>
       const buttonEl =
